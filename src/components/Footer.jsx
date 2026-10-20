@@ -15,6 +15,12 @@ const Footer = () => {
         <p>Segunda a Quinta: 10:00 - 19:00</p>
         <p>Sexta e Sabado: 11:00 - 17:00</p>
       </div>
+
+      <div>
+        <h3>Contatos</h3>
+        <p>Avenida Paulista, 1100</p>
+        <p>11 99999-8888</p>
+      </div>
     </footer>
   )
 }
