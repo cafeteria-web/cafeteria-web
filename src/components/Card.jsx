@@ -2,7 +2,7 @@ const Card = ({titulo, descricao, preco, tag }) => {
   return (
     <article className="flex flex-col rounded-2xl border border-[#EADBC6] bg-white/60 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
       <div className="flex items-start justify-between">
-        <span className="text-4xl" aria-hidden="true">{emoji}</span>
+        <span className="text-4xl" aria-hidden="true"></span>
         <span className="rounded-full bg-[#EADBC6] px-3 py-1 font-mono text-xs">{tag}</span>
       </div>
 
