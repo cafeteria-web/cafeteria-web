@@ -4,6 +4,11 @@ const destaques = [
   { titulo: 'Latte Git Merge', descricao: 'Café e leite vaporizado se encontram sem conflitos.', preco: 'R$ 14,00', tag: 'cremoso' },
   { titulo: 'Mocha Deploy', descricao: 'Chocolate, espresso e chantilly para comemorar o deploy.', preco: 'R$ 16,00', tag: 'doce' },
 ]
+const diferenciais = [
+  {  titulo: 'Wi-Fi rápido', texto: 'Internet estável e tomadas em todas as mesas.' },
+  {  titulo: 'Grãos selecionados', texto: 'Torra fresca de pequenos produtores brasileiros.' },
+  {  titulo: 'Feito para devs', texto: 'Ambiente silencioso para codar, estudar ou fazer pair.' },
+]
 
 const Home = () => {
   return (
@@ -81,6 +86,37 @@ const Home = () => {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+            
+      <section className="bg-[#EADBC6]">
+        <div className="mx-auto grid max-w-6xl gap-8 px-5 py-16 md:grid-cols-3">
+          {diferenciais.map((d) => (
+            <div key={d.titulo} className="text-center">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#C8853A] text-2xl">
+                {d.icone}
+              </div>
+              <h3 className="mt-4 text-lg font-bold">{d.titulo}</h3>
+              <p className="mt-1 text-sm text-[#4A2C1A]/75">{d.texto}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      
+      <section className="mx-auto max-w-6xl px-5 py-16">
+        <div className="rounded-3xl bg-[#4A2C1A] px-6 py-12 text-center text-[#F5EBDD]">
+          <h2 className="text-3xl font-bold">Pronto para o próximo café?</h2>
+          <p className="mx-auto mt-3 max-w-md text-[#F5EBDD]/80">
+            Dê uma olhada no cardápio completo e escolha o seu favorito.
+          </p>
+          <Link
+            to="/produtos"
+            className="mt-6 inline-block rounded-full bg-[#C8853A] px-6 py-3 font-semibold text-[#361E11] transition-colors hover:bg-[#F5EBDD]"
+          >
+            Ver todos os produtos
+          </Link>
         </div>
       </section>
 
