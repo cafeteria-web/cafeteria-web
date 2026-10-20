@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Card from '../components/Card'
 const destaques = [
   { titulo: 'Espresso Compilado', descricao: 'Dose dupla de grãos especiais. Sem warnings, só foco.', preco: 'R$ 9,00', tag: 'clássico' },
   { titulo: 'Latte Git Merge', descricao: 'Café e leite vaporizado se encontram sem conflitos.', preco: 'R$ 14,00', tag: 'cremoso' },
@@ -65,26 +66,7 @@ const Home = () => {
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {destaques.map((item) => (
-            <article
-              key={item.titulo}
-              className="flex flex-col rounded-2xl border border-[#EADBC6] bg-white/60 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="flex items-start justify-between">
-                <span className="text-4xl" aria-hidden="true">{item.emoji}</span>
-                <span className="rounded-full bg-[#EADBC6] px-3 py-1 font-mono text-xs">{item.tag}</span>
-              </div>
-              <h3 className="mt-4 text-xl font-bold">{item.titulo}</h3>
-              <p className="mt-2 flex-1 text-sm text-[#4A2C1A]/75">{item.descricao}</p>
-              <div className="mt-5 flex items-center justify-between">
-                <span className="text-lg font-bold text-[#A96D2A]">{item.preco}</span>
-                <button
-                  type="button"
-                  className="rounded-full bg-[#C8853A] px-4 py-2 text-sm font-semibold text-[#361E11] transition-colors hover:bg-[#A96D2A] hover:text-[#F5EBDD]"
-                >
-                  Pedir
-                </button>
-              </div>
-            </article>
+            <Card key={item.titulo} {...item} />
           ))}
         </div>
       </section>
