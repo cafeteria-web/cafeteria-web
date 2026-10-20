@@ -1,4 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Card from './components/Card'
+import Footer from "./pages/Footer"
+import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Produtos from './pages/Produtos'
 
